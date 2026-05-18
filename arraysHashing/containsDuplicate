@@ -1,0 +1,10 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        seenVals = {}
+        index = 0
+        for i in nums:
+            if i in seenVals:
+                return True
+            seenVals[i] = index
+            index += 1
+        return False
